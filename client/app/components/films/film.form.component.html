@@ -1,0 +1,59 @@
+<div class='container'>
+    <div class='row justify-content-md-center'>
+        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+            <h1 style='text-align: center'>Create a new film</h1>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+            <form (ngSubmit)="doSubmit()">
+                <div class='form-group'>
+                    <input class='form-control' type='text' name='name' placeholder='Film Name'
+                           [(ngModel)]="film.name">
+                </div>
+                <div class='form-group'>
+                    <input class='form-control' type='text' name='slug' placeholder='slug'
+                           [(ngModel)]="film.slug">
+                </div>
+                <div class='form-group'>
+                    <input class='form-control' type='number' name='price' placeholder='Ticket Price in $' [(ngModel)]="film.price">
+                </div>
+                <div class='form-group'>
+                    <select class='form-control' name='genre' [(ngModel)]="film.genre" multiple>
+                        <option value="1">Sci-Fi</option>
+                        <option value="2">Horror</option>
+                        <option value="3">Thriller</option>
+                        <option value="4">Comedy</option>
+                    </select>
+                </div>
+                <div class='form-group'>
+                    <input class='form-control' type='number' name='rating' placeholder='Average rating'
+                           [(ngModel)]="film.rating">
+                </div>
+                <div class='form-group'>
+                    <input class='form-control' type='text' name='country' placeholder='Initial Released country'
+                           [(ngModel)]="film.country">
+                </div>
+                <div class='form-group'>
+                    <input class='form-control' type='date' name='release_date' placeholder='Initial release date'
+                           [(ngModel)]="film.release_date">
+                </div>
+                <div class='form-group'>
+                    <input class='form-control' type='text' name='image' placeholder='Image url e.g. https://google.com/movie-image.png'
+                           [(ngModel)]="film.image">
+                </div>
+                <div class='form-group'>
+					<textarea class='form-control' rows='8' name='description' placeholder='description'
+                              [(ngModel)]="film.description"></textarea>
+                </div>
+                <div class='form-group' style='width:50%; margin-left:auto; margin-right:auto;'>
+                    <button class='ui-button-primary btn-block'
+                            pButton
+                            label="Submit">
+                    </button>
+                </div>
+            </form>
+            <a routerLink="/">Go Back</a>
+        </div>
+    </div>
+</div>

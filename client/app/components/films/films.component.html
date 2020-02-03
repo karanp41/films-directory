@@ -1,0 +1,32 @@
+<div class='container'>
+    <div style="padding-top: 3rem">
+        <div class='jumbotron'>
+            <h1><i class="fa fa-envira" aria-hidden="true"></i> Welcome to Flims Directory</h1>
+            <p>View our hand-picked masterpiece films by Christopher Nolan </p>
+            <p *ngIf="userdata">
+                <button pButton type="button"
+                        class="ui-button-primary"
+                        (click)="addNewFilm()"
+                        label="Add New Film">
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <div class='row film-item'>
+        <div class='col-md-3 col-sm-6' *ngFor="let film of films">
+            <div class="card">
+                <img class="card-img-top" src="{{film.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{film.name}}</h5>
+                    <p class="card-text">Ticket Price: ${{film.price}}</p>
+                    <button pButton type="button"
+                            class="ui-button-info"
+                            (click)="moreInfo(film.slug)"
+                            label="More Info.">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
