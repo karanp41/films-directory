@@ -16,9 +16,13 @@ It also uses Gulp for running task and TsLint.
 git clone https://github.com/karanp41/films-directory.git
 ```
 
-* Install npm package. Build and compile the dist folder: 
+* Install npm package.
 ```
 npm install
+```
+
+* Seed the Dump to DB, Build and compile the dist folder: 
+```
 npm run build
 ```
 
